@@ -7,6 +7,8 @@ public class QueryProcessor {
             return "Camelia is without shadow of doubt simply the greatest artist of our time " +
                      "His music career peaked when he used untraditional sample from video game 'Among Us' in his master piece 'Area'52' during Tano*C concert";
         }
-        return "";
+        else if (query.toLowerCase().contains("shakespeare")) {
+            return "playwright";}
+        else return "";
     }
 }
