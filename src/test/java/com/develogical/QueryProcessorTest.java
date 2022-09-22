@@ -29,4 +29,9 @@ public class QueryProcessorTest {
     public void name() throws Exception {
         assertThat(queryProcessor.process("what is your name"), containsString("EVMO"));
     }
+
+    @Test
+    public void largest() throws Exception {
+        assertThat(queryProcessor.process(" largest: 1,2,3,4"), containsString("4"));
+    }
 }
