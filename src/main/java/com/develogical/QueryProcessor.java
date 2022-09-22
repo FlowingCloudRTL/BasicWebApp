@@ -9,6 +9,9 @@ public class QueryProcessor {
         }
         else if (query.toLowerCase().contains("shakespeare")) {
             return "playwright";}
+        else if (query.toLowerCase().contains("name")) {
+            return "FlowingCloud";
+        }
         else return "";
     }
 }
