@@ -15,9 +15,8 @@ public class QueryProcessor {
             return "EVMO";
         } else if (query.toLowerCase().contains("largest")) {
             query = query.replaceAll("\\s", "");
- 
             String[] parts = query.split(":");
-            String[] numbers = parts[1].split(",");
+            String[] numbers = parts[2].split(",");
             int[] num = new int[numbers.length];
 
             for(int i = 0;i < num.length;i++)
@@ -34,8 +33,11 @@ public class QueryProcessor {
             return String.valueOf(max);   
         }
         else if (query.toLowerCase().contains("plus")) {
-            
-            return "";}
+            query = query.replaceAll("\\s", "");     
+            String[] parts = query.split(":")[1].split("plus");
+            String num1 = parts[0].replaceAll("whatis", "");
+            String num2 = parts[1];
+            return String.valueOf(Integer.parseInt(num1) + Integer.parseInt(num2) );}
         else return "";
     }
 }
